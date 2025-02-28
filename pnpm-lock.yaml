@@ -67,6 +67,31 @@ importers:
         specifier: ^8.24.1
         version: 8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
 
+  apps/widget-a:
+    dependencies:
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@rsbuild/core':
+        specifier: ^1.2.8
+        version: 1.2.12
+      '@rsbuild/plugin-react':
+        specifier: ^1.1.0
+        version: 1.1.1(@rsbuild/core@1.2.12)
+      '@types/react':
+        specifier: ^19.0.9
+        version: 19.0.10
+      '@types/react-dom':
+        specifier: ^19.0.3
+        version: 19.0.4(@types/react@19.0.10)
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
 packages:
 
   '@babel/code-frame@7.26.2':
