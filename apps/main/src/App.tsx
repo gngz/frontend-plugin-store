@@ -1,9 +1,11 @@
-
+import { SelectAccount } from './SelectAccount';
+import { useAppState } from './state/useState';
 
 const App = () => {
+  const { accounts } = useAppState();
   return (
     <div>
-      APP
+      <SelectAccount accounts={accounts} />
     </div>
   );
 };

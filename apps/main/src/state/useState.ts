@@ -1,15 +1,25 @@
 import { useState } from 'react';
 import { Account } from '../lib/domain/account';
+import { TransferHelper } from '../lib/transfer';
 
-export function useAppState() {
-  const [accounts, setAccounts] = useState<Account[]>([
+function getInitialState(): Account[] {
+  const state = [
     new Account({
       name: 'John Doe',
     }),
     new Account({
       name: 'Jane Doe',
     }),
-  ]);
+  ];
+
+  TransferHelper.getInstance().deposit(state[0], 500);
+  TransferHelper.getInstance().deposit(state[1], 1000);
+
+  return state;
+}
+
+export function useAppState() {
+  const [accounts, setAccounts] = useState<Account[]>(getInitialState());
 
   return {
     accounts,
