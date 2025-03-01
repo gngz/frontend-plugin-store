@@ -1,7 +1,7 @@
 const App = () => {
   return (
     <div>
-      <h1>Widget A</h1>
+      <h1>Widget B</h1>
     </div>
   );
 };
